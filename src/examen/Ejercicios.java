@@ -38,13 +38,17 @@ public class Ejercicios {
 					while((registroJugadores= ficheroJug.readLine())!= null) {
 						String[]camposJug = registroJugadores.split("#");
 						if (idEquipo.equals(camposJug[7])) {
-							//Jugador jugador = new Jugador(camposJug[1], camposJug[2], Integer.parseInt(camposJug[2]), camposJug[3], camposJug[4].charAt(0), Integer.parseInt(camposJug[5]), Integer.parseInt(camposJug[6]), Integer.parseInt(camposJug[7]));							
-							
+	
 							Jugador jugador = new Jugador();
-							jugador.setId(Integer.parseInt(campos[0]));
-							jugador.setNif(campos[1]);
-							jugador.setNombre(campos[2]);
-							jugador.set
+							jugador.setId(Integer.parseInt(camposJug[0]));
+							jugador.setNif(camposJug[1]);
+							jugador.setNombre(camposJug[2]);
+							jugador.setLongitudPaso(Integer.parseInt(camposJug[3]));
+							jugador.setFecha_nac(camposJug[4]);
+							jugador.setSexo(camposJug[5].charAt(0));
+							jugador.setDorsal(Integer.parseInt(camposJug[6]));
+							jugador.setIdEquipo(Integer.parseInt(camposJug[7]));
+
 							listaJugadores.add(jugador);
 						}
 					}	
@@ -66,7 +70,7 @@ public class Ejercicios {
 	public static void main(String[]args){
 		// 
 		 Ejercicios ejercicios= new Ejercicios();
-		 ArrayList<Jugador> resultadoEjercicio1 = ejercicios.ejercicio1("ficheros/jugadores.txt", "REAL MADRID");
+		 ArrayList<Jugador> resultadoEjercicio1 = ejercicios.ejercicio1("ficheros/jugadores.txt", "BARCELONA");
 		 System.out.println("h");
 	}
 }
