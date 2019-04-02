@@ -18,7 +18,6 @@ public class Jugador extends Persona {
 		this.dorsal = dorsal;
 		this.idEquipo = idEq;
 	}
-
 	
 	public static Comparator<Jugador> compareNamesPlayers = new Comparator<Jugador>() {
 		@Override
