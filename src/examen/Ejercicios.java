@@ -18,7 +18,6 @@ public class Ejercicios {
 	// implementar y llamar desde AQUI los ejercicios
     // ¡IMPORTANTE!: NO DEJAR AQUI CÓDIGO IRRELEVANTE, LEER ENUNCIADO.
 	
-	
 	//EJERCICIO 1
 	public ArrayList<Jugador> ejercicio1 (String rutaJugadores , String equipo){
 		String registro = null;
