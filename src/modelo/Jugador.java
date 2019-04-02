@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Comparator;
+
 public class Jugador extends Persona {
 	private int id;
 	private int dorsal;
@@ -17,6 +19,20 @@ public class Jugador extends Persona {
 		this.idEquipo = idEq;
 	}
 
+	
+	public static Comparator<Jugador> compareNamesPlayers = new Comparator<Jugador>() {
+		@Override
+		public int compare(Jugador o1, Jugador o2) {
+			if (o1.getNombre().compareToIgnoreCase(o2.getNombre())>0) {
+				return 1;
+			}else if(o1.getNombre().compareToIgnoreCase(o2.getNombre())<0) {
+				return -1;
+			}
+			return 0;
+		}	
+	};
+	
+	
 	public int getId() {
 		return id;
 	}
